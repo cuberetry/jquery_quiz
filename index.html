@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Tanapol Dangsakul 62011301 </title>
+    <script>
+        var num1 = Math.round(Math.random()*100);
+        var num2 = Math.round(Math.random()*100);
+        var answer = num1 + num2;
+    </script>
+
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+        $("#submit").click(function(){
+             if (document.getElementById('anstxt1').value == answer) {
+                $("#newjung").html("<p > Good job! </p>");
+                $("#newjung").css("color", "green");
+             }else{
+                $("#newjung").html("<p> Try again! </p>");
+                $("#newjung").css("color", "red");
+             }
+        });
+    });
+
+    </script>
+
+    <h2> Tanapol Dangsakul 62011301 </h2>
+    <h2> Quiz </h2>
+    <p> What is the answer of <span id="num1"></span> + <span id="num2"></span> ? </p>
+    <input type="text" id="anstxt1">
+    <br> <br>
+    <button id="submit"> Submit </button>
+    <p id="newjung"></p> 
+    <script>
+        document.getElementById('num1').innerText = num1;
+        document.getElementById('num2').innerText = num2;
+        document.getElementById('answer').innerText = answer;
+        document.getElementById('anstxt1').value;
+    </script>
+    
+</body>
+</html>
